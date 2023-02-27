@@ -1,4 +1,4 @@
-# Python to Cosmos using MSIToken
+# Python Azure Function to Cosmos using MSIToken
 
 ### Testing Timer Triggered Functions using MSI authentication
 
