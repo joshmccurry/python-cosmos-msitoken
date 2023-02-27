@@ -27,10 +27,15 @@ Two environmental variables are used:
 Execute the powershell script **role_configuration.ps1** to configure Cosmos for metadata access.
 
 ```powershell
-az account set --subscription <Subscription ID>;
+#Replace Variable Names
 $resourceGroup = "<Resource Group Name>";
 $cosmosName = "<Cosmos Name>";  
-$functionName = "<Function Name>";  
+$functionName = "<Function Name>";
+$subscription_ID = "<Subscription ID>";  
+
+
+#Setup Custom Role
+az account set --subscription $subscription_ID;
 $cosmosEndpoint = az cosmosdb show --resource-group $resourceGroup --name $cosmosName --query documentEndpoint;
 $scope = az cosmosdb show --resource-group $resourceGroup --name $cosmosName --query id --output tsv;
 $principal = az webapp identity show --resource-group $resourceGroup --name $functionName --query principalId --output tsv;
