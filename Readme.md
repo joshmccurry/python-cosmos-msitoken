@@ -2,6 +2,8 @@
 
 ### Testing Timer Triggered Functions using MSI authentication
 
+---
+
 ### Versions Used
 
 - **Python 3.9**
@@ -9,8 +11,15 @@
 - **Azure Identity Latest**
 - **Azure Cosmos Latest**
 
+---
+
+### Purpose
+
+Testing the default configuration of using a Timer Tiggered Function with an User Assigned Managed Identity.
 
 ---
+
+### App Settings
 
 Two environmental variables are used:
 - **identity**
